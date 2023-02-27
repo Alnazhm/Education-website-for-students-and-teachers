@@ -30,9 +30,9 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ SSH_HOST }}
-          username: ${{ SSH_USER }}
-          key: ${{ SSH_TOKEN }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_TOKEN }}
           script: |
             cd /root/enimi1602
             docker-compose down
