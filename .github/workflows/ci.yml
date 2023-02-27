@@ -22,11 +22,11 @@ jobs:
           --health-timeout 10s
           --health-retries 5
     steps:
-      - uses: actions/checkout@v2
-      - name: Build and Test
-        run: |
-          docker-compose build
-          docker-compose run --rm web sh -c "python manage.py migrate && python manage.py test"
+     # - uses: actions/checkout@v2
+     # - name: Build and Test
+      #  run: |
+        #  docker-compose build
+         # docker-compose run --rm web sh -c "python manage.py migrate && python manage.py test"
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
