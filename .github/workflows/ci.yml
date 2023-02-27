@@ -36,5 +36,4 @@ jobs:
           script: |
             cd /root/enimi1602
             docker-compose down
-            docker-compose pull
             docker-compose up -d
